@@ -18,18 +18,15 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install -r flask-demo/requirements.txt
+          pip install -r requirements.txt
       
       - name: Run tests
         run: |
           echo "Testing Flask app..."
-          # 簡單測試：檢查語法
-          python -m py_compile flask-demo/app.py
+          python -m py_compile app.py
           echo "✅ Syntax OK"
       
       - name: Deploy (範例)
         run: |
           echo "🚀 Deploying to server..."
-          # 這裡可以加上部署指令
-          # 例如: scp, rsync, 或 API call
           echo "Done!"
